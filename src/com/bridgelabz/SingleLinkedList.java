@@ -129,7 +129,7 @@ public class SingleLinkedList {
 
 
         //Remove nodes to the Beginning
-        slList.searchNode(30);
+        slList.addAtPos(3,40,slList.head);
 
         //Call the Displays Method
         slList.displayList();
