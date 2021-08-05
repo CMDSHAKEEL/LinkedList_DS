@@ -18,7 +18,7 @@ public class SingleLinkedList {
     private Node tail = null;
 
     //addNode() will add a new node to the list, Create a new node, Checks if the list is empty by using head address
-    
+
     public void addNode(int x){
         Node newNode = new Node(x);
 
@@ -46,13 +46,24 @@ public class SingleLinkedList {
 
     }
 
+    //Add nodes to the list at Beginning
+    public void addToBegin(int x){
+        if (head == null){
+            this.head = new Node(x);
+        }else{
+            Node temp = new Node(x);
+            temp.next = head;
+            head = temp;
+        }
+    }
+
     public static void main(String[] args) {
         SingleLinkedList slList = new SingleLinkedList();
 
         //Add nodes to the list
-        slList.addNode(56);
-        slList.addNode(30);
-        slList.addNode(70);
+        slList.addToBegin(56);
+        slList.addToBegin(30);
+        slList.addToBegin(70);
 
         //Call the Displays Method
         slList.displayList();
