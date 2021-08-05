@@ -106,6 +106,20 @@ public class SingleLinkedList {
         temp.next = null;
     }
 
+    //Search nodes to the Beginning to End
+    public void searchNode(int traget){
+        int i=0;
+        while (head != null){
+            i++;
+            if (head.data == traget){
+                System.out.println(traget+" Value is at "+ i + " Node");
+            }
+            head = head.next;
+        }
+        System.out.println("Singly Linked List is Empty");
+    }
+
+
     public static void main(String[] args) {
         SingleLinkedList slList = new SingleLinkedList();
         //Add nodes to the list at End
@@ -115,7 +129,7 @@ public class SingleLinkedList {
 
 
         //Remove nodes to the Beginning
-        slList.remNodeAtEnd();
+        slList.searchNode(30);
 
         //Call the Displays Method
         slList.displayList();
