@@ -56,14 +56,27 @@ public class SingleLinkedList {
             head = temp;
         }
     }
+    //Add nodes to the list at End
+    public void addToEnd(int x){
+        Node node = new Node(x);
+        if (head == null){
+            this.head = node;
+        }else{
+            Node temp = head;
+            while (temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = node;
+        }
+    }
 
     public static void main(String[] args) {
         SingleLinkedList slList = new SingleLinkedList();
+        //Add nodes to the list at End
+        slList.addToEnd(70);
+        slList.addToEnd(30);
+        slList.addToEnd(56);
 
-        //Add nodes to the list
-        slList.addToBegin(56);
-        slList.addToBegin(30);
-        slList.addToBegin(70);
 
         //Call the Displays Method
         slList.displayList();
